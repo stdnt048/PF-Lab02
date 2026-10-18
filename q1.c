@@ -2,89 +2,28 @@
 
 int main()
 {
-	int class , fail ; 
-
- 	printf("Enter the class of the student : ");
-	scanf("%d",&class);
+	int balls = 1 ;
+	int runs,dot,boundry,total_runs ;
+	dot = boundry = total_runs = 0 ;
 	
-
-	switch(class)
+	while(balls<=6)
 	{
-		case 1 : 
-			printf("Enter the number of subjects failed : ");
-			scanf("%d",&fail);
-			switch(fail)
-			{
-				case(0):
-					printf("5 Grace marks per subject\n");
-					break;
-				case(1):
-					printf("5 Grace marks per subject\n");
-					break;
-				case(2):
-					printf("5 Grace marks per subject\n");
-					break;
-				case(3):
-					printf("5 Grace marks per subject\n");
-					break;
-				case(4):
-					printf("0 Grace marks per subject\n");
-					break;
-				default: 
-					printf("0 Grace marks per subject\n");
-					break;
-
-			}
-			break;
+		scanf("%d",&runs);
 		
-		case 2: 
-			printf("Enter the number of subjects failed : ");
-			scanf("%d",&fail);
-			switch(fail)
-			{
-				
-				case(0):
-					printf("4 Grace marks per subject\n");
-					break;
-				case(1):
-					printf("4 Grace marks per subject\n");
-					break;
-				case(2):
-					printf("4 Grace marks per subject\n");
-					break;
-				case(3):
-					printf("0 Grace marks per subject\n");
-					break;
-				default: 
-					printf("0 Grace marks per subject\n");
-					break;
-			}
-			break;
-
-		case 3 : 
-			printf("Enter the number of subjects failed : ");
-			scanf("%d",&fail);		
-			switch(fail)
-			{
-				case(0):
-					printf("5 Grace marks per subject\n");
-					break;
-				case(1):
-					printf("5 Grace marks per subject\n");
-					break;
-				case(2):
-					printf("0 Grace marks per subject\n");
-					break;
-				default: 
-					printf("0 Grace marks per subject\n");
-					break;
-			}
-			break;
-
-		default: 
-			printf("Invalid class !");
-			break;
+		if(runs==4||runs==6)
+		boundry++;
+		else if(runs==0)
+		dot++;
+		
+		printf("Ball : %d \t Runs = %d \n",balls,runs);
+		
+		total_runs = total_runs + runs;
+		balls++;
 	}
-
-	return 0 ;
+	
+	printf("Total runs : %d \n",total_runs);
+	printf("Boundries : %d \n",boundry);
+	printf("Dot balls : %d ",dot);
+	
+	return 0;
 }
