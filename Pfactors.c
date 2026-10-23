@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 
-int Pfactors(int a );
+void Pfactors(int a );
 
 int main()
 {
@@ -16,7 +16,7 @@ int main()
 	return 0;
 }
 
-int Pfactors(int a)
+void Pfactors(int a)
 {
 	int i = 1 , j , fc = 0;
 	
